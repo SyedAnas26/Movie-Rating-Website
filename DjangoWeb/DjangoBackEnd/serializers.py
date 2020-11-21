@@ -1,20 +1,25 @@
 from rest_framework import serializers
-from DjangoBackEnd.models import Movie, Rating
+from DjangoBackEnd.models import MovieRating
 
 
-class MovieSerializer(serializers.ModelSerializer):
+class MovieRatingSerializer(serializers.ModelSerializer):
     class Meta:
-        model = Movie
+        model = MovieRating
         fields = ('MovieId',
                   'MovieTitle',
                   'ReleaseDate',
-                  'MovieImage')
-
-
-class RatingSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = Rating
-        fields = ('MovieId',
+                  'MovieImage',
                   'UpVotes',
                   'DownVotes',
                   'Rating')
+
+
+# class RatingSerializer(serializers.ModelSerializer):
+#     Movie = MovieSerializer(read_only=True)
+#
+#     class Meta:
+#         model = Rating
+#         fields = ('Movie',
+#                   'UpVotes',
+#                   'DownVotes',
+#                   'Rating')
