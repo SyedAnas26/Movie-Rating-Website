@@ -12,14 +12,3 @@ class MovieRatingSerializer(serializers.ModelSerializer):
                   'UpVotes',
                   'DownVotes',
                   'Rating')
-
-
-# class RatingSerializer(serializers.ModelSerializer):
-#     Movie = MovieSerializer(read_only=True)
-#
-#     class Meta:
-#         model = Rating
-#         fields = ('Movie',
-#                   'UpVotes',
-#                   'DownVotes',
-#                   'Rating')
