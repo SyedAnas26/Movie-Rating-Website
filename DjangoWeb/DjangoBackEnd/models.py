@@ -14,13 +14,3 @@ class MovieRating(models.Model):
         verbose_name = 'Movie'
         verbose_name_plural = 'Movies'
 
-
-# class Rating(models.Model):
-#     MovieId = models.ForeignKey(Movie, on_delete=models.CASCADE)
-#     UpVotes = models.BigIntegerField()
-#     DownVotes = models.BigIntegerField()
-#     Rating = models.DecimalField(max_digits=5, decimal_places=2)
-#
-#     class Meta:
-#         verbose_name = 'Rating'
-#         verbose_name_plural = 'Ratings'
